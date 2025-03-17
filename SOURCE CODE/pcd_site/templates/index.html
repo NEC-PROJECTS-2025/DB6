@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    /* Background with Image and Opacity */
+    body {
+        background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+                    url('/static/images/bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        font-family: 'Century', sans-serif; /* Century font applied here */
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    /* Title Styling - Aligning it to the left */
+    h1 {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        font-family: 'Century', serif; /* Century font applied */
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f8f9fa;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        margin: 50px 0 20px 30px; /* Added margin and aligned left */
+    }
+
+    /* Paragraph Styling - Padding on left and right */
+    p {
+        opacity: 0;
+        animation: fadeIn 3s forwards 1s;
+        text-align: justify;
+        font-family: 'Century', serif; /* Century font applied */
+        font-size: 1.3rem;
+        line-height: 1.8;
+        color: #eaeaea;
+        margin: 30px 130px 0 30px; /* Added padding to left and right */
+    }
+
+    /* Fade-in animation for content */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<h1>Pancreatic Cancer Detection</h1>
+
+<p>This project employs advanced deep learning techniques for pancreatic cancer detection <br>
+    and classification from medical images, leveraging a hybrid architecture of InceptionV3 <br>
+    and DenseNet121, known as InceptionDense.The combined paradigm enhances the <br>
+    model's ability to identify tumors of varying sizes and shapes, significantly improving <br>
+    detection capabilities.</p>
+<p>Our study utilized a dataset of annotated CT images and implemented robust preprocessing methods, including multi-scale feature extraction and dense connectivity. This approach not only improves model accuracy but also ensures reliable diagnostics for early pancreatic cancer detection, aiding healthcare professionals in providing timely and effective treatment.</p>
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    /* Background with Image and Opacity */
+    body {
+        background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+                    url('/static/images/bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        font-family: 'Century', sans-serif; /* Century font applied here */
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    /* Title Styling - Aligning it to the left */
+    h1 {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        font-family: 'Century', serif; /* Century font applied */
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f8f9fa;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        margin: 50px 0 20px 50px; /* Added margin and aligned left */
+    }
+
+    /* Table Styling */
+    table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 50px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    table th, table td {
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        background-color:rgb(33, 34, 35);
+    }
+
+    /* Fade-in animation for content */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<h1>&emsp;&emsp;&emsp;&emsp;Model Evaluation Metrics</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Accuracy (%)</th>
+            <th>Precision (%)</th>
+            <th>Recall (%)</th>
+            <th>F1 Score (%)</th>
+            <th>Specificity (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>InceptionDense</td>
+            <td>99.75</td>
+            <td>99.47</td>
+            <td>100.00</td>
+            <td>99.73</td>
+            <td>99.52</td>
+        </tr>
+        <tr>
+            <td>EfficientDense</td>
+            <td>100.00</td>
+            <td>100.00</td>
+            <td>100.00</td>
+            <td>100.00</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td>EfficientV3</td>
+            <td>100.00</td>
+            <td>100.00</td>
+            <td>100.00</td>
+            <td>100.00</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td>EfficientVGG</td>
+            <td>99.75</td>
+            <td>99.47</td>
+            <td>100.00</td>
+            <td>99.73</td>
+            <td>99.52</td>
+        </tr>
+        <tr>
+            <td>ResNetV2</td>
+            <td>65.40</td>
+            <td>57.72</td>
+            <td>100.00</td>
+            <td>73.19</td>
+            <td>34.45</td>
+        </tr>
+        <tr>
+            <td>VGG16V2</td>
+            <td>72.98</td>
+            <td>100.00</td>
+            <td>42.78</td>
+            <td>59.93</td>
+            <td>100.00</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}
